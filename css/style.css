@@ -1,0 +1,350 @@
+/*Обнуление | Начало*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*::before,*::after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/*Обнуление | Конец*/
+
+@font-face {
+	font-family: 'TT Lakes';
+	font-style: normal;
+	font-weight: normal;
+  src: local('TT Lakes'),
+	   url('../fonts/TTLakes/TTLakes-Regular.woff') format('woff'),
+	   url('../fonts/TTLakes/TTLakes-Regular.ttf') format('ttf'),
+	   url('../fonts/TTLakes/TTLakes-Regular.eot') format('eot');
+}
+@font-face {
+	font-family: 'TT Lakes';
+	font-style: normal;
+	font-weight: bold;
+	src: local('TT Lakes'),
+		url('../fonts/TTLakes/TTLakes-Bold.woff') format('woff'),
+		url('../fonts/TTLakes/TTLakes-Bold.ttf') format('ttf'),
+		url('../fonts/TTLakes/TTLakes-Bold.eot') format('eot');
+}
+@font-face {
+	font-family: 'TT Lakes';
+	font-style: normal;
+	font-weight: 500;
+	src: local('TT Lakes'),
+		url('../fonts/TTLakes/TTLakes-Medium.woff') format('woff'),
+		url('../fonts/TTLakes/TTLakes-Medium.ttf') format('ttf'),
+		url('../fonts/TTLakes/TTLakes-Medium.eot') format('eot');
+}
+
+body {
+	max-width: 1120px;
+	margin: 0 auto;
+	font-family: 'TT Lakes';
+}
+
+h1 {
+	display: block;
+	position: relative;
+	padding: 20px 0;
+	font-size: 28px;
+	line-height: 40px;
+	font-weight: bold;
+}
+h1::before {
+	content: "";
+	position: absolute;
+	background: #41F6D7;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	width: 4px;
+	height: 40px;
+	left: -16px;
+}
+
+/*Header | Начало*/
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 88px;
+	padding: 0 8px;
+}
+.header a {
+	display: block;
+}
+.header__left-menu {
+	position: relative;
+}
+.header__left-menu::after {
+	content: '|';
+	position: absolute;
+	font-size: 32px;
+	color: #EAEAEA;
+	right: -14px;
+}
+.left-menu {
+	display: flex;
+	align-items: center;
+}
+.icon {
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+}
+.left-menu__logo {
+	margin:0 8px;
+}
+
+.header .icon {
+	margin:0 8px;
+}
+.right-menu {
+	display: flex;
+}
+.left-menu__icon-burger {
+	background: #FF3E79 url(../img/icons/burger.svg) no-repeat;
+}
+.header__icons {
+	display: flex;
+}
+.header__icons label {
+	display: none;
+}
+.header__icons .icon:not(:nth-last-of-type(-n+2)) {
+	display: none;
+}
+
+.header__icon-1{
+	background: #FF3E79 url(../img/icons/call.svg) no-repeat;
+}
+
+.header__icon-2{
+	background: #FF3E79 url(../img/icons/chat.svg) no-repeat;
+}
+
+.header__icon-3{
+	background: #FF3E79 url(../img/icons/profile.svg) no-repeat;
+}
+.header__icon-4{
+	background: #FF3E79 url(../img/icons/repair.svg) no-repeat;
+}
+.header__icon-5{
+	background: #FF3E79 url(../img/icons/checkstatus.svg) no-repeat;
+}
+.icon a{
+	height: 40px;
+	width: 40px;
+}
+/*Header | Конец*/
+
+.content {
+	padding: 0 16px;
+	background: #F8F8F8;
+}
+
+/*Service | Начало*/
+
+.service__links {
+	display: none;
+}
+.nav__items {
+	display: flex;
+	overflow: auto;
+	align-items: center;
+}
+.nav__item a {
+	display: block;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+	color: #7E7E82;
+	white-space: nowrap;
+	height: 40px;
+	padding: 8px 16px;
+}
+.nav__item[selected] {	
+	border: 2px solid #B8FFEC;
+	border-radius: 6px;
+}
+.desc {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 24px;
+	padding-bottom: 30px;
+}
+.desc__text{
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 16px;
+}
+.desc__text-wrap {
+	height: 100px;
+	overflow: hidden;
+	margin-bottom: 16px;
+}
+.desc__text-wrap p{
+	margin-bottom: 20px;
+}
+.desc__img {
+	width: 100%;
+}
+.desc__img  img{
+	width: 100%;
+}
+.p {
+	font-family: TT Lakes;
+	font-size: 15px;
+	line-height: 20px;
+	color: #1B1C21;
+}
+.desc__read-more {
+	position: relative;
+	padding-left: 40px; 
+	font-size: 16px;
+	line-height: 24px;
+	color: #1B1C21;
+	font-weight: 500;
+}
+.desc__read-more::before {
+	content: "";
+	position: absolute;
+	background: url(../img/icons/more.svg) no-repeat;
+	width: 10px;
+	height: 10px;
+	left: 20px;
+	top: 7px;
+}
+
+
+@media (min-width: 768px) {
+/* Стили для устройств с шириной viewport, находящейся в диапазоне 768px - 991px */
+.header__icons .icon:not(:nth-last-of-type(-n+2)) {
+	display: block;
+}
+.header__left-menu::after {
+	display: none;
+}
+.left-menu__main-menu {
+	margin-right: 40px;
+	position: relative;
+}
+.left-menu__main-menu::after {
+	content: '|';
+	position: absolute;
+	font-size: 32px;
+	color: #EAEAEA;
+	right: -22px;
+	top: 4px;
+}
+
+.header__icons .icon:nth-last-of-type(2) {
+	margin-left: 22px;
+	position: relative;
+}
+.header__icons .icon:nth-last-of-type(2)::before {
+	content: '|';
+	position: absolute;
+	font-size: 32px;
+	color: #EAEAEA;
+	left: -20px;
+	top: 4px;
+}
+.desc__text {
+	flex: 1 1 40%;
+	margin: 10px 25px;
+}
+.desc__img {	
+	flex: 1 1 40%;
+	margin: 10px 25px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.desc__text-wrap {
+	height: 160px;
+}
+}
+
+/* Устройства с большим экраном (компьютеры, 1200px и выше) */
+@media (min-width: 1200px) {
+.header {
+	display: none;
+}
+.header__icons .icon:not(:nth-last-of-type(-n+2)) {
+	display: none;
+}
+.nav__items {
+	overflow: visible;
+	flex-wrap: wrap;
+}
+.service__top {
+	display: flex;
+	justify-content: space-between;
+}
+.service__top h1 {
+	display: inline-block;
+	margin: auto;
+}
+.service__links {
+	display: block;
+	font-family: TT Lakes;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+}
+.service__links a {
+	display: inline-block;
+	white-space: nowrap;
+	position: relative;
+	width: auto;
+	margin: 28px 80px 0px 0px;
+	height: 1em;
+	color: #1B1C21;
+}
+.service-links a::after {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -14px;
+	right: -50px;
+}
+.service-links__request-link::after {
+	background: url(../img/icons/repair.svg) no-repeat;
+}
+.service-links__status-link::after {
+	background: url(../img/icons/checkstatus.svg) no-repeat;
+}
+
+}
+
+
