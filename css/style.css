@@ -181,6 +181,15 @@ h1::before {
 	display: flex;
 	overflow: auto;
 	align-items: center;
+	position: relative;
+}
+.nav__items::after {
+	content: "";
+	position: absolute;
+	background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+	height: 40px;
+	width: 20px;
+	right: 0;
 }
 .nav__item a {
 	display: block;
@@ -195,6 +204,7 @@ h1::before {
 .nav__item[selected] {	
 	border: 2px solid #B8FFEC;
 	border-radius: 6px;
+	background-color: #fff;
 }
 .desc {
 	display: flex;
@@ -306,6 +316,9 @@ h1::before {
 	overflow: visible;
 	flex-wrap: wrap;
 }
+.nav__items::after {
+	display: none;
+}
 .service__top {
 	display: flex;
 	justify-content: space-between;
@@ -315,27 +328,26 @@ h1::before {
 	margin: auto;
 }
 .service__links {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: right;
 	font-family: TT Lakes;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 500;
 }
 .service__links a {
-	display: inline-block;
-	white-space: nowrap;
 	position: relative;
 	width: auto;
-	margin: 28px 80px 0px 0px;
-	height: 1em;
 	color: #1B1C21;
+	margin-right: 90px;
 }
 .service-links a::after {
 	content: "";
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	bottom: -14px;
+	bottom: -5px;
 	right: -50px;
 }
 .service-links__request-link::after {
