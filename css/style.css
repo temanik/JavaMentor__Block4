@@ -69,26 +69,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 body {
 	max-width: 1120px;
 	margin: 0 auto;
-	font-family: 'TT Lakes';
-}
-
-h1 {
-	display: block;
-	position: relative;
-	padding: 20px 0;
-	font-size: 28px;
-	line-height: 40px;
-	font-weight: bold;
-}
-h1::before {
-	content: "";
-	position: absolute;
-	background: #41F6D7;
-	border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
-	width: 4px;
-	height: 40px;
-	left: -16px;
+	font-family: 'TT Lakes';	
+	background-color: #F8F8F8;
 }
 
 /*Header | Начало*/
@@ -98,6 +80,7 @@ h1::before {
 	align-items: center;
 	height: 88px;
 	padding: 0 8px;
+	background-color: white;
 }
 .header a {
 	display: block;
@@ -128,7 +111,7 @@ h1::before {
 .header .icon {
 	margin:0 8px;
 }
-.right-menu {
+.header__right-menu {
 	display: flex;
 }
 .left-menu__icon-burger {
@@ -140,10 +123,12 @@ h1::before {
 .header__icons label {
 	display: none;
 }
-.header__icons .icon:not(:nth-last-of-type(-n+2)) {
+.header__icons_left-part {
 	display: none;
 }
-
+.header__icons_right-part {
+	display: flex;
+}
 .header__icon-1{
 	background: #FF3E79 url(../img/icons/call.svg) no-repeat;
 }
@@ -165,11 +150,29 @@ h1::before {
 	height: 40px;
 	width: 40px;
 }
+.service__header {
+	display: block;
+	position: relative;
+	padding: 20px 0;
+	font-size: 28px;
+	line-height: 40px;
+	font-weight: bold;
+}
+.service__header::before {
+	content: "";
+	position: absolute;
+	background: #41F6D7;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	width: 4px;
+	height: 40px;
+	left: -16px;
+}
+
 /*Header | Конец*/
 
 .content {
 	padding: 0 16px;
-	background: #F8F8F8;
 }
 
 /*Service | Начало*/
@@ -177,13 +180,13 @@ h1::before {
 .service__links {
 	display: none;
 }
-.nav__items {
+.navigation__items {
 	display: flex;
 	overflow: auto;
 	align-items: center;
 	position: relative;
 }
-.nav__items::after {
+.navigation__items::after {
 	content: "";
 	position: absolute;
 	background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
@@ -191,7 +194,7 @@ h1::before {
 	width: 20px;
 	right: 0;
 }
-.nav__item a {
+.navigation__item a {
 	display: block;
 	font-size: 16px;
 	line-height: 24px;
@@ -201,34 +204,34 @@ h1::before {
 	height: 40px;
 	padding: 8px 16px;
 }
-.nav__item[selected] {	
+.navigation__item_selected {	
 	border: 2px solid #B8FFEC;
 	border-radius: 6px;
 	background-color: #fff;
 }
-.desc {
+.description {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 24px;
+	padding-top: 24px;
 	padding-bottom: 30px;
 }
-.desc__text{
+.description__text{
 	font-size: 14px;
 	line-height: 18px;
 	margin-bottom: 16px;
 }
-.desc__text-wrap {
+.description__text-wrap {
 	height: 100px;
 	overflow: hidden;
 	margin-bottom: 16px;
 }
-.desc__text-wrap p{
+.description__text-wrap p{
 	margin-bottom: 20px;
 }
-.desc__img {
+.description__img {
 	width: 100%;
 }
-.desc__img  img{
+.description__img  img{
 	width: 100%;
 }
 .p {
@@ -237,15 +240,16 @@ h1::before {
 	line-height: 20px;
 	color: #1B1C21;
 }
-.desc__read-more {
+.description__read-more {
 	position: relative;
 	padding-left: 40px; 
 	font-size: 16px;
 	line-height: 24px;
 	color: #1B1C21;
 	font-weight: 500;
+	background-color: #F8F8F8;
 }
-.desc__read-more::before {
+.description__read-more::before {
 	content: "";
 	position: absolute;
 	background: url(../img/icons/more.svg) no-repeat;
@@ -257,9 +261,13 @@ h1::before {
 
 
 @media (min-width: 768px) {
-/* Стили для устройств с шириной viewport, находящейся в диапазоне 768px - 991px */
-.header__icons .icon:not(:nth-last-of-type(-n+2)) {
-	display: block;
+/* Стили для устройств с шириной viewport, находящейся в диапазоне 768px - 1119px */
+
+.content {
+	padding: 0 24px;
+}
+.header__icons_left-part {
+	display: flex;
 }
 .header__left-menu::after {
 	display: none;
@@ -277,11 +285,11 @@ h1::before {
 	top: 4px;
 }
 
-.header__icons .icon:nth-last-of-type(2) {
-	margin-left: 22px;
+.header__icons_right-part {
+	margin-left: 30px;
 	position: relative;
 }
-.header__icons .icon:nth-last-of-type(2)::before {
+.header__icons_right-part::before {
 	content: '|';
 	position: absolute;
 	font-size: 32px;
@@ -289,43 +297,45 @@ h1::before {
 	left: -20px;
 	top: 4px;
 }
-.desc__text {
-	flex: 1 1 40%;
-	margin: 10px 25px;
+.service__header::before {
+	left: -24px;
 }
-.desc__img {	
+.description__text {
+	flex: 1 1 40%;
+	margin: 10px 10px 25px 0;
+}
+.description__img {	
 	flex: 1 1 40%;
 	margin: 10px 25px;
 	border-radius: 8px;
 	overflow: hidden;
 }
-.desc__text-wrap {
+.description__text-wrap {
 	height: 160px;
 }
 }
 
-/* Устройства с большим экраном (компьютеры, 1200px и выше) */
-@media (min-width: 1200px) {
+/* Устройства с большим экраном (компьютеры, 1120px и выше) */
+@media (min-width: 1120px) {
 .header {
 	display: none;
 }
 .header__icons .icon:not(:nth-last-of-type(-n+2)) {
 	display: none;
 }
-.nav__items {
+.navigation__items {
 	overflow: visible;
 	flex-wrap: wrap;
 }
-.nav__items::after {
+.navigation__items::after {
 	display: none;
 }
 .service__top {
 	display: flex;
 	justify-content: space-between;
 }
-.service__top h1 {
+.service__header {
 	display: inline-block;
-	margin: auto;
 }
 .service__links {
 	display: flex;
@@ -340,7 +350,8 @@ h1::before {
 	position: relative;
 	width: auto;
 	color: #1B1C21;
-	margin-right: 90px;
+	margin-right: 40px;
+	padding-right: 50px;
 }
 .service-links a::after {
 	content: "";
@@ -348,7 +359,7 @@ h1::before {
 	width: 40px;
 	height: 40px;
 	bottom: -5px;
-	right: -50px;
+	right: -5px;
 }
 .service-links__request-link::after {
 	background: url(../img/icons/repair.svg) no-repeat;
