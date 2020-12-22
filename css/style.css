@@ -123,10 +123,10 @@ body {
 .header__icons label {
 	display: none;
 }
-.header__icons_left-part {
+.header__icons--left-part {
 	display: none;
 }
-.header__icons_right-part {
+.header__icons--right-part {
 	display: flex;
 }
 .header__icon-1{
@@ -204,34 +204,34 @@ body {
 	height: 40px;
 	padding: 8px 16px;
 }
-.navigation__item_selected {	
+.navigation__item--selected {	
 	border: 2px solid #B8FFEC;
 	border-radius: 6px;
 	background-color: #fff;
 }
-.description {
+.paragraph {
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: 24px;
 	padding-bottom: 30px;
 }
-.description__text{
+.paragraph__text{
 	font-size: 14px;
 	line-height: 18px;
 	margin-bottom: 16px;
 }
-.description__text-wrap {
+.paragraph__text-wrap {
 	height: 100px;
 	overflow: hidden;
 	margin-bottom: 16px;
 }
-.description__text-wrap p{
+.paragraph__text-wrap p{
 	margin-bottom: 20px;
 }
-.description__img {
+.paragraph__img {
 	width: 100%;
 }
-.description__img  img{
+.paragraph__img  img{
 	width: 100%;
 }
 .p {
@@ -240,7 +240,7 @@ body {
 	line-height: 20px;
 	color: #1B1C21;
 }
-.description__read-more {
+.paragraph__read-more {
 	position: relative;
 	padding-left: 40px; 
 	font-size: 16px;
@@ -249,7 +249,7 @@ body {
 	font-weight: 500;
 	background-color: #F8F8F8;
 }
-.description__read-more::before {
+.paragraph__read-more::before {
 	content: "";
 	position: absolute;
 	background: url(../img/icons/more.svg) no-repeat;
@@ -266,7 +266,7 @@ body {
 .content {
 	padding: 0 24px;
 }
-.header__icons_left-part {
+.header__icons--left-part {
 	display: flex;
 }
 .header__left-menu::after {
@@ -285,11 +285,11 @@ body {
 	top: 4px;
 }
 
-.header__icons_right-part {
+.header__icons--right-part {
 	margin-left: 30px;
 	position: relative;
 }
-.header__icons_right-part::before {
+.header__icons--right-part::before {
 	content: '|';
 	position: absolute;
 	font-size: 32px;
@@ -300,17 +300,17 @@ body {
 .service__header::before {
 	left: -24px;
 }
-.description__text {
+.paragraph__text {
 	flex: 1 1 40%;
 	margin: 10px 10px 25px 0;
 }
-.description__img {	
+.paragraph__img {	
 	flex: 1 1 40%;
 	margin: 10px 25px;
 	border-radius: 8px;
 	overflow: hidden;
 }
-.description__text-wrap {
+.paragraph__text-wrap {
 	height: 160px;
 }
 }
