@@ -28,9 +28,6 @@
 	margin:0 8px;
 }
 
-.service-icon-set .icon {
-	margin:0 8px;
-}
 .header__right-menu {
 	display: flex;
 }
@@ -43,28 +40,11 @@
 .header__icons label {
 	display: none;
 }
-.service-icon-set {
+.header__icons--left-part {
 	display: none;
 }
 .header__icons--right-part {
 	display: flex;
-}
-.service-icon-set__call-icon{
-	background: #FF3E79 url(../img/icons/call.svg) no-repeat;
-}
-
-.service-icon-set__chat-icon{
-	background: #FF3E79 url(../img/icons/chat.svg) no-repeat;
-}
-
-.service-icon-set__profile-icon{
-	background: #FF3E79 url(../img/icons/profile.svg) no-repeat;
-}
-.header__repair-icon{
-	background: #FF3E79 url(../img/icons/repair.svg) no-repeat;
-}
-.header__checkstatus-icon{
-	background: #FF3E79 url(../img/icons/checkstatus.svg) no-repeat;
 }
 .service__header {
 	display: block;
@@ -181,7 +161,7 @@
 .content {
 	padding: 0 24px;
 }
-.service-icon-set {
+.header__icons--left-part {
 	display: flex;
 }
 .header__left-menu::after {

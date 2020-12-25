@@ -26,3 +26,27 @@ a {
 	opacity: 0.9;
 	transform: scale(1.1);
 }
+.service-icon-set {
+	display: flex;
+}
+.service-icon-set .icon {
+	margin:0 8px;
+}
+
+.service-icon-set__call-icon{
+	background: #FF3E79 url(../img/icons/call.svg) no-repeat center;
+}
+
+.service-icon-set__chat-icon{
+	background: #FF3E79 url(../img/icons/chat.svg) no-repeat center;
+}
+
+.service-icon-set__profile-icon{
+	background: #FF3E79 url(../img/icons/profile.svg) no-repeat center;
+}
+.header__repair-icon{
+	background: #FF3E79 url(../img/icons/repair.svg) no-repeat center;
+}
+.header__checkstatus-icon{
+	background: #FF3E79 url(../img/icons/checkstatus.svg) no-repeat center;
+}
