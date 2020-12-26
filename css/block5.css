@@ -70,7 +70,8 @@
 	padding: 24px;
 }
 .aside__footer-icons {
-	margin-left: -10px;
+	position: relative;
+	left: -10px;
 }
 .aside__footer-mail {
 	font-size: 16px;
