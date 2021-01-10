@@ -1,0 +1,93 @@
+@import url(style.css);
+
+
+.brands__swiper {
+	position: absolute;
+	overflow: hidden;
+	height: 124px;
+	margin: 0 -16px;
+}
+.brands__swiper::after {
+	content: "";
+	position: absolute;
+	background: rgb(255,255,255);
+	background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+	height: 81px;
+	width: 24px;
+	top: 12px;
+	right: 0px;
+	z-index: 1;
+}
+.brands__list {
+	padding: 16px 0;
+}
+.brands__button {
+	width: 240px;
+	height: 72px;
+	background: #fff;
+	position: relative;
+	border: 1px solid #EAEAEA;
+	border-radius: 6px;
+	padding-left: 16px;
+}
+.brands__button:before {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 40px;
+	height: 40px;
+	right: 16px;
+	bottom: 16px;
+	border: 2px solid #FF3E79;
+	border-radius: 50%;
+	background: url(../img/icons/arrow_pink.svg) no-repeat center;
+}
+.brands__button img {
+	margin: auto 0;
+}
+.brands__read-more {
+	display: none;
+}
+
+
+@media (min-width: 768px) {
+/* Стили для устройств с шириной viewport, находящейся в диапазоне 768px - 1119px */
+
+.brands__swiper {
+	height: auto;
+	position: static;
+	margin: 0;
+}
+.brands__swiper::after {
+	display: none;
+}
+.brands__list {
+	padding: 24px 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	max-height: 215px;
+	transition: .5s;
+}
+.brands__button {
+	flex: 0 1 31%;
+	text-align: left;
+}
+.brands__read-more {
+	display: block;
+}
+}
+
+@media (min-width: 1120px) {
+/* Стили для устройств с шириной viewport, находящейся в диапазоне 1120px и более*/
+.brands__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+}
+.brands__button {	
+	flex: 0 0 240px;
+}
+
+
+}

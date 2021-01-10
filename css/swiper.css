@@ -1,0 +1,28 @@
+.swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      margin-left: 16px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+      bottom: 8px;
+      margin: 0 6px;
+}
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #B5B6BC;
+        opacity: 0.2;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #B5B6BC;
+        opacity: 1;
+}
