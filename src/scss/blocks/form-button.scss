@@ -1,0 +1,22 @@
+.form-button {
+  background-color: $color-pink;
+  padding: 6px 40px 6px 14px;
+  font-size: 12px;
+  line-height: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: left;
+  border-radius: 20px;
+  height: 32px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    width: 8px;
+    height: 12px;
+    background: url(../img/icons/arrow_white.svg) no-repeat center;
+  }
+}

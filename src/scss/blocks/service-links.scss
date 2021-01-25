@@ -1,0 +1,20 @@
+.service-links {
+  & a::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -5px;
+    right: -5px;
+  }
+  &__request-link {
+    &::after {
+      background: url(../img/icons/repair.svg) no-repeat;
+    }
+  }
+  &__status-link {
+    &::after {
+      background: url(../img/icons/checkstatus.svg) no-repeat;
+    }
+  }
+}

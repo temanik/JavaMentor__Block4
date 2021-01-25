@@ -1,0 +1,85 @@
+@import "./icon.scss";
+@import "./service-icon-set.scss";
+@import "./left-menu.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88px;
+  padding: 0 8px;
+  background-color: white;
+  margin: 0 -16px;
+
+  @media (min-width: 768px) {
+    margin: 0 -24px;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+
+  a {
+    display: block;
+  }
+
+  &__left-menu::after {
+    content: "|";
+    position: absolute;
+    font-size: 32px;
+    color: #eaeaea;
+    right: -14px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__right-menu {
+    display: flex;
+  }
+
+  &__icons {
+    display: flex;
+
+    label {
+      display: none;
+    }
+  }
+
+  &__repair-icon {
+    background: $color-pink url(../img/icons/repair.svg) no-repeat center;
+  }
+
+  &__checkstatus-icon {
+    background: $color-pink url(../img/icons/checkstatus.svg) no-repeat center;
+  }
+
+  &__left-icons-part {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__right-icons-part {
+    display: flex;
+
+    @media (min-width: 768px) {
+      margin-left: 30px;
+      position: relative;
+    }
+
+    &::before {
+      @media (min-width: 768px) {
+        content: "|";
+        position: absolute;
+        font-size: 32px;
+        color: #eaeaea;
+        left: -20px;
+        top: 4px;
+      }
+    }
+  }
+}

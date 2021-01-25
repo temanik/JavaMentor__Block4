@@ -1,0 +1,20 @@
+.language-change {
+  &__button {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #1b1c21;
+    background-color: #fff;
+    padding: 3px;
+    border: 1px solid white;
+    transition: border 0.2s;
+
+    &:hover {
+      border: 1px solid #7e7e82;
+    }
+
+    &--selected {
+      color: #7e7e82;
+    }
+  }
+}

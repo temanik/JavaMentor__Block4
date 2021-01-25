@@ -1,0 +1,29 @@
+.left-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    margin: 0 8px;
+  }
+
+  &__icon-burger {
+    background: $color-pink url(../img/icons/burger.svg) no-repeat;
+  }
+
+  &__main-menu {
+    @media (min-width: 768px) {
+      margin-right: 40px;
+      position: relative;
+
+      &::after {
+        content: "|";
+        position: absolute;
+        font-size: 32px;
+        color: #eaeaea;
+        right: -22px;
+        top: 4px;
+      }
+    }
+  }
+}

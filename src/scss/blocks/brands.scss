@@ -1,0 +1,39 @@
+@import "./buttons-block.scss";
+
+.brands {
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  &__swiper {
+    position: relative;
+    height: 130px;
+
+    &::after {
+      height: 81px;
+    }
+
+    @media (min-width: 768px) {
+      height: auto;
+      max-height: 110px;
+    }
+  }
+
+  &__button {
+    height: 72px;
+
+    & img {
+      margin: auto 0;
+    }
+  }
+
+  &__read-more {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}

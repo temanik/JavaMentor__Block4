@@ -1,0 +1,45 @@
+.paragraph {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  padding-bottom: 30px;
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      flex: 1 1 40%;
+      margin: 10px 10px 25px 0;
+    }
+  }
+
+  &__text-wrap {
+    max-height: 100px;
+    overflow: hidden;
+
+    @media (min-width: 1120px) {
+      max-height: 160px;
+    }
+
+    & p {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex: 1 1 40%;
+      margin: 10px 25px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+}

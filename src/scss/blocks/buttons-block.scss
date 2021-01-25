@@ -1,0 +1,120 @@
+.buttons-block {
+  overflow: hidden;
+  position: relative;
+  margin: 0 -16px;
+  padding: 0 16px;
+
+  @media (min-width: 768px) {
+    height: auto;
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+    width: 24px;
+    top: 12px;
+    right: 0;
+    z-index: 1;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    padding: 16px 0;
+
+    @media (min-width: 768px) {
+      padding: 24px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      transition: 0.5s;
+    }
+
+    @media (min-width: 1120px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+  }
+
+  &__button {
+    width: 240px;
+    background: #fff;
+    position: relative;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding-left: 16px;
+
+    @media (min-width: 768px) {
+      flex: 0 1 31%;
+      text-align: left;
+    }
+
+    @media (min-width: 1120px) {
+      flex: 0 0 240px;
+    }
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 40px;
+      height: 40px;
+      right: 16px;
+      bottom: 16px;
+      border: 2px solid $color-pink;
+      border-radius: 50%;
+      background: url(../img/icons/arrow_pink.svg) no-repeat center;
+    }
+  }
+}
+
+// @media (min-width: 768px) {
+/* Стили для устройств с шириной viewport, находящейся в диапазоне 768px - 1119px */
+
+// .brands__swiper {
+//   height: auto;
+//   max-height: 200px;
+//   position: static;
+//   margin: 0;
+// }
+// .brands__swiper::after {
+//   display: none;
+// }
+// .brands__list {
+//   padding: 24px 0;
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 24px;
+//   transition: 0.5s;
+// }
+// .brands__button {
+//   flex: 0 1 31%;
+//   text-align: left;
+// }
+// .brands__read-more {
+//   display: block;
+// }
+// }
+
+// @media (min-width: 1120px) {
+//   /* Стили для устройств с шириной viewport, находящейся в диапазоне 1120px и более*/
+//   .brands__list {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 32px;
+//   }
+//   .brands__button {
+//     flex: 0 0 240px;
+//   }
+// }

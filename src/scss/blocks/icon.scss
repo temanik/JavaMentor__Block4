@@ -1,0 +1,22 @@
+.icon {
+  margin: 0 8px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  transition: 0.2s;
+
+  a {
+    display: block;
+    height: 40px;
+    width: 40px;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+
+  &--close {
+    background: $color-pink url(../img/icons/close.svg) no-repeat center;
+  }
+}

@@ -1,0 +1,64 @@
+@import "./service-links.scss";
+@import "./navigation.scss";
+@import "./paragraph.scss";
+@import "./read-more.scss";
+
+.service {
+  &__top {
+    @media (min-width: 1440px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__header {
+    @media (min-width: 1440px) {
+      display: inline-block;
+    }
+
+    display: block;
+    padding: 20px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #41f6d7;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      width: 4px;
+      height: 40px;
+      left: 0px;
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @media (min-width: 1440px) {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      font-family: TT Lakes;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+
+      & a {
+        position: relative;
+        width: auto;
+        color: #1b1c21;
+        margin-right: 40px;
+        padding-right: 50px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          bottom: -5px;
+          right: -5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "./buttons-block.scss";
+
+.repair {
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  &__swiper {
+    height: 220px;
+
+    @media (min-width: 768px) {
+      height: auto;
+      max-height: 200px;
+    }
+
+    &::after {
+      height: 170px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    height: 160px;
+    padding-top: 16px;
+  }
+
+  &__read-more {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+
+    @media (min-width: 1120px) {
+      display: none;
+    }
+  }
+}

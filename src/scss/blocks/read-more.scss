@@ -1,0 +1,20 @@
+.read-more {
+  position: relative;
+  padding: 5px 5px 5px 40px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1c21;
+  font-weight: 500;
+  background-color: #f8f8f8;
+
+  &__arrow {
+    position: absolute;
+    background: url(../img/icons/more.svg) no-repeat;
+    width: 10px;
+    height: 11px;
+    left: 20px;
+    top: 11px;
+    transform: rotate(0deg);
+    transition: 0.2s ease-out;
+  }
+}

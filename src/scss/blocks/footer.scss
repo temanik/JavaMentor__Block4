@@ -1,0 +1,42 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  border-top: #d9fff5 1px solid;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  & span {
+    display: block;
+  }
+
+  &__item {
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7e7e82;
+    opacity: 0.72;
+
+    @media (min-width: 768px) {
+      flex-basis: 33.33%;
+    }
+
+    &:first-child {
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+
+    &:last-child {
+      @media (min-width: 768px) {
+        text-align: right;
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    padding-bottom: 16px;
+  }
+}
