@@ -1,4 +1,4 @@
-export function mainMenu() {
+export function modalToggle() {
   let mainMenu = document.querySelector(".left-menu__icon-burger");
   let aside = document.querySelector(".aside");
   let closeElement = document.querySelector(".icon--close");

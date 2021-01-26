@@ -1,8 +1,8 @@
 @import "./icon.scss";
+@import "./language-change.scss";
 
-.aside {
+.modal-menu {
   position: fixed;
-  top: 0;
   left: -320px;
   z-index: 200;
   height: 100vh;
@@ -21,7 +21,6 @@
 
   &.show {
     left: 0px;
-    width: 100vw;
   }
 
   &__wrap {
@@ -40,7 +39,7 @@
 
   &__header {
     display: flex;
-    height: 88px;
+    flex: 0 0 88px;
     padding: 0 16px;
     align-items: center;
   }
@@ -63,7 +62,7 @@
 
   &__search {
     margin: 0 0 0 auto;
-    background: $color-pink url(../img/icons/search.svg) no-repeat center;
+    background: $button-color url(../img/icons/search.svg) no-repeat center;
   }
 
   &__navigation {

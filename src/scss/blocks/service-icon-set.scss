@@ -10,14 +10,14 @@
   }
 
   &__call-icon {
-    background: $color-pink url(../img/icons/call.svg) no-repeat center;
+    background: $button-color url(../img/icons/call.svg) no-repeat center;
   }
 
   &__chat-icon {
-    background: $color-pink url(../img/icons/chat.svg) no-repeat center;
+    background: $button-color url(../img/icons/chat.svg) no-repeat center;
   }
 
   &__profile-icon {
-    background: $color-pink url(../img/icons/profile.svg) no-repeat center;
+    background: $button-color url(../img/icons/profile.svg) no-repeat center;
   }
 }

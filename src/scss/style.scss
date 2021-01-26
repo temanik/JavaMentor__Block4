@@ -1,4 +1,9 @@
-$color-pink: #ff3e79;
+$button-color: #ff3e79;
+$input-text-color: #b5b6bc;
+$dark-text-color: #1b1c21;
+$light-text-color: #7e7e82;
+$background-body-color: #f8f8f8;
+$background-item-color: #fff;
 
 @import "./style-reset.css";
 @import "./font-face.css";
@@ -6,6 +11,8 @@ $color-pink: #ff3e79;
 @import "./blocks/header.scss";
 @import "./blocks/service.scss";
 @import "./blocks/aside.scss";
+@import "./blocks/modal-menu.scss";
+@import "./blocks/modal-feedback.scss";
 @import "./swiper.css";
 @import "./blocks/brands.scss";
 @import "./blocks/repair.scss";

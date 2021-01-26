@@ -15,44 +15,48 @@
   </head>
   <body>
     <main class="content-wrap">
-      <aside class="aside">
-        <div class="aside__wrap">
-          <div class="aside__header">
-            <button class="aside__burger icon icon--close"></button>
-            <div class="aside__logo">
+      <aside class="aside modal-menu">
+        <div class="modal-menu__wrap">
+          <div class="modal-menu__header">
+            <button class="modal-menu__burger icon icon--close"></button>
+            <div class="modal-menu__logo">
               <a href="#"><img src="img/icons/Group.svg" alt="" /></a>
             </div>
-            <button class="aside__search icon"></button>
+            <button class="modal-menu__search icon"></button>
           </div>
-          <div class="aside__navigation">
-            <ul class="aside__navigation-items">
-              <li class="aside__navigation-item">
+          <div class="modal-menu__navigation">
+            <ul class="modal-menu__navigation-items">
+              <li class="modal-menu__navigation-item">
                 <a href="#">Ремонт техники</a>
               </li>
               <li
-                class="aside__navigation-item aside__navigation-item--selected"
+                class="modal-menu__navigation-item modal-menu__navigation-item--selected"
               >
                 <a href="#">Услуги и сервисы</a>
               </li>
-              <li class="aside__navigation-item">
+              <li class="modal-menu__navigation-item">
                 <a href="#">Корпоративным клиентам</a>
               </li>
-              <li class="aside__navigation-item">
+              <li class="modal-menu__navigation-item">
                 <a href="#">Продавцам техники</a>
               </li>
-              <li class="aside__navigation-item"><a href="#">Партнерам</a></li>
-              <li class="aside__navigation-item">
+              <li class="modal-menu__navigation-item">
+                <a href="#">Партнерам</a>
+              </li>
+              <li class="modal-menu__navigation-item">
                 <a href="#">Производителям</a>
               </li>
-              <li class="aside__navigation-item">
+              <li class="modal-menu__navigation-item">
                 <a href="#">Наши сервисные центры</a>
               </li>
-              <li class="aside__navigation-item"><a href="#">Контакты</a></li>
+              <li class="modal-menu__navigation-item">
+                <a href="#">Контакты</a>
+              </li>
             </ul>
           </div>
-          <div class="aside__footer">
-            <div class="aside__footer-icons">
-              <div class="aside__footer-icon-set service-icon-set">
+          <div class="modal-menu__footer">
+            <div class="modal-menu__footer-icons">
+              <div class="modal-menu__footer-icon-set service-icon-set">
                 <div class="service-icon-set__call-icon icon">
                   <a href="#"></a>
                 </div>
@@ -64,13 +68,13 @@
                 </div>
               </div>
             </div>
-            <div class="aside__footer-mail">
+            <div class="modal-menu__footer-mail">
               <a href="#">mail@cps.com</a>
             </div>
-            <div class="aside__footer-phone-number">
+            <div class="modal-menu__footer-phone-number">
               <a href="#">8 800 890 8900</a>
             </div>
-            <div class="aside__footer-language-change language-change">
+            <div class="modal-menu__footer-language-change language-change">
               <button
                 class="language-change__button language-change__button--selected"
               >
@@ -365,6 +369,54 @@
             Получить коммерческое предложение<span></span>
           </button>
         </section>
+
+        <aside class="aside modal-feedback show">
+          <button class="modal-feedback__icon-close icon--close icon"></button>
+          <h2 class="modal-feedback__title">Обратная связь</h2>
+          <form class="modal-feedback__form form" action="#" method="POST">
+            <div class="form__item">
+              <input
+                class="form__input"
+                placeholder="Имя"
+                type="text"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <input
+                class="form__input"
+                placeholder="Телефон"
+                type="tel"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <input
+                class="form__input"
+                placeholder="Электронная почта"
+                type="email"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <textarea
+                class="form__textarea"
+                placeholder="Сообщение"
+                name="message"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+          </form>
+          <p class="modal-feedback__text">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+            <a href="#">политикой конфиденциальности</a>
+          </p>
+          <button type="submit" class="modal-feedback__submit form-button">
+            Отправить
+          </button>
+        </aside>
 
         <footer class="footer">
           <a class="footer__item" href="#"
