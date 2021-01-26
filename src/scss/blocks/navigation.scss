@@ -30,20 +30,29 @@
     }
   }
 
-  &__item a {
-    display: block;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    color: #7e7e82;
-    white-space: nowrap;
-    height: 40px;
-    padding: 8px 16px;
+  &__item {
+    border: 2px solid transparent;
+    transition: 0.2s;
+
+    & a {
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #7e7e82;
+      white-space: nowrap;
+      height: 40px;
+      padding: 8px 14px;
+    }
   }
 
   &__item--selected {
     border: 2px solid #b8ffec;
     border-radius: 6px;
     background-color: #fff;
+
+    & a {
+      text-decoration: none;
+    }
   }
 }

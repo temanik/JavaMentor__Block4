@@ -28,7 +28,6 @@ export function getSwiper() {
       swiperWrapper.classList.remove("swiper-wrapper");
 
       for (let i = 0; i < swiperSlide.length; i++) {
-        console.log(swiperSlide);
         swiperSlide[i].classList.remove("swiper-slide");
       }
       swiperPagination.remove("swiper-pagination");

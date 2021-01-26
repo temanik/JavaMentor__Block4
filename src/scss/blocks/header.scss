@@ -3,16 +3,19 @@
 @import "./left-menu.scss";
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 88px;
   padding: 0 8px;
   background-color: white;
-  margin: 0 -16px;
+  z-index: 100;
+  width: 100%;
 
   @media (min-width: 768px) {
-    margin: 0 -24px;
   }
 
   @media (min-width: 1440px) {
