@@ -8,4 +8,4 @@ import { modalToggle } from "./modal-toggle";
 getSwiper();
 readMore();
 interactive();
-mainMenu();
+modalToggle();

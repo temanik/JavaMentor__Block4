@@ -1,27 +1,27 @@
 export function interactive() {
-  let navigationItems = document.querySelectorAll(".navigation__item");
+  let navigationItemName = "navigation__item";
+  let asideNavigationItemName = "modal-menu__navigation-item";
+
+  let navigationItems = document.querySelectorAll("." + navigationItemName);
   let asideNavigationItems = document.querySelectorAll(
-    ".aside__navigation-item"
+    "." + asideNavigationItemName
   );
 
-  for (let i = 0; i < navigationItems.length; i++) {
-    navigationItems[i].addEventListener("click", function (evt) {
-      let selectedClass = "navigation__item--selected";
-      let newElement = evt.path[1];
-      let oldElement = document.querySelector("." + selectedClass);
+  addListener(navigationItems, navigationItemName);
+  addListener(asideNavigationItems, asideNavigationItemName);
 
-      menuSelecter(oldElement, newElement, selectedClass);
-    });
-  }
+  function addListener(navigationItems, navigationItemName) {
+    for (let i = 0; i < navigationItems.length; i++) {
+      navigationItems[i].addEventListener("click", function (evt) {
+        let selectedClass = navigationItemName + "--selected";
+        let newElement = evt.path[1];
+        let oldElement = document.querySelector("." + selectedClass);
 
-  for (let i = 0; i < asideNavigationItems.length; i++) {
-    asideNavigationItems[i].addEventListener("click", function (evt) {
-      let selectedClass = "aside__navigation-item--selected";
-      let newElement = evt.path[1];
-      let oldElement = document.querySelector("." + selectedClass);
+        evt.stopPropagation();
 
-      menuSelecter(oldElement, newElement, selectedClass);
-    });
+        menuSelecter(oldElement, newElement, selectedClass);
+      });
+    }
   }
 
   function menuSelecter(oldElement, newElement, selectedClass) {

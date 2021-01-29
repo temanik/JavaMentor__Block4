@@ -8,12 +8,14 @@
   }
 
   &__icon-burger {
-    background: $button-color url(../img/icons/burger.svg) no-repeat;
+    background: $button-color url(../img/icons/burger.svg) no-repeat center;
   }
 
   &__main-menu {
+    display: flex;
+
     @media (min-width: 768px) {
-      margin-right: 40px;
+      margin-right: 34px;
       position: relative;
 
       &::after {

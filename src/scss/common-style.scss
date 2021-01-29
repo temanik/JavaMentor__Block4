@@ -65,16 +65,16 @@ p {
 }
 
 .content-wrap {
-  margin-top: 88px;
+  position: relative;
+  overflow: hidden;
 
   @media (min-width: 1440px) {
     display: flex;
-    margin-top: 0;
-    overflow: hidden;
   }
 }
 
 .content {
+  margin-top: 88px;
   padding: 0 16px;
   transition: opacity 0.2s ease-in-out;
 
@@ -87,5 +87,6 @@ p {
   }
 
   @media (min-width: 1440px) {
+    margin-top: 0;
   }
 }

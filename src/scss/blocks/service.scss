@@ -4,10 +4,12 @@
 @import "./read-more.scss";
 
 .service {
+  padding-top: 12px;
   &__top {
     @media (min-width: 1440px) {
       display: flex;
       justify-content: space-between;
+      position: relative;
     }
   }
 
@@ -28,6 +30,10 @@
       width: 4px;
       height: 40px;
       left: 0px;
+
+      @media (min-width: 1440px) {
+        left: -31px;
+      }
     }
   }
 

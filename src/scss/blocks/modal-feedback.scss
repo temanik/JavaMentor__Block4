@@ -3,13 +3,32 @@
 
 .modal-feedback {
   display: flex;
-  flex-direction: column;
-  width: 320px;
-  padding: 24px 16px;
-  right: -120%;
-  top: 0;
-  background: #fff;
-  gap: 16px;
+  justify-content: flex-end;
+  position: fixed;
+  right: -100%;
+  z-index: 200;
+  height: 100%;
+  width: 200px;
+  background: rgba($color: #fff, $alpha: 0);
+  transition: 0.45s ease-out;
+  opacity: 0;
+
+  @media (min-width: 1440px) {
+    position: absolute;
+  }
+
+  &__wrap {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: -26px 0px 41px 7px rgba(65, 97, 122, 0.1);
+    width: 320px;
+    height: 100vh;
+    overflow-y: auto;
+    background: #fff;
+    padding: 24px 16px;
+  }
 
   &__icon-close {
     flex: 0 0 40px;
@@ -21,7 +40,10 @@
   }
 
   &.show {
-    right: 0;
+    width: 100%;
+    right: 0px;
+    opacity: 1;
+    background: rgba($color: #fff, $alpha: 0.9);
   }
 
   &__title {

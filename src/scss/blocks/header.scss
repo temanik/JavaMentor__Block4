@@ -6,11 +6,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 88px;
-  padding: 0 8px;
   background-color: white;
   z-index: 100;
   width: 100%;
@@ -22,8 +17,14 @@
     display: none;
   }
 
-  a {
-    display: block;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1120px;
+    margin: 0 auto;
+    height: 88px;
+    padding: 0 8px;
   }
 
   &__left-menu::after {
@@ -40,14 +41,7 @@
 
   &__right-menu {
     display: flex;
-  }
-
-  &__icons {
-    display: flex;
-
-    label {
-      display: none;
-    }
+    align-items: center;
   }
 
   &__repair-icon {
@@ -60,29 +54,24 @@
 
   &__left-icons-part {
     display: none;
+    margin-right: 32px;
+    position: relative;
 
     @media (min-width: 768px) {
       display: flex;
+    }
+
+    &::after {
+      content: "|";
+      position: absolute;
+      font-size: 32px;
+      color: #eaeaea;
+      right: -22px;
+      top: 8px;
     }
   }
 
   &__right-icons-part {
     display: flex;
-
-    @media (min-width: 768px) {
-      margin-left: 30px;
-      position: relative;
-    }
-
-    &::before {
-      @media (min-width: 768px) {
-        content: "|";
-        position: absolute;
-        font-size: 32px;
-        color: #eaeaea;
-        left: -20px;
-        top: 4px;
-      }
-    }
   }
 }
