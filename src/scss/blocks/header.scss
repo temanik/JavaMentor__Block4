@@ -1,12 +1,8 @@
-@import "./icon.scss";
-@import "./service-icon-set.scss";
-@import "./left-menu.scss";
-
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: $background-item-color;
   z-index: 100;
   width: 100%;
 

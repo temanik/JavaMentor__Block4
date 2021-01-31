@@ -81,11 +81,11 @@
         </div>
       </aside>
 
-      <aside class="aside modal-feedback">
-        <div class="modal-feedback__wrap">
-          <button class="modal-feedback__icon-close icon--close icon"></button>
-          <h2 class="modal-feedback__title">Обратная связь</h2>
-          <form class="modal-feedback__form form" action="#" method="POST">
+      <aside class="aside modal-feedback modal">
+        <div class="modal__wrap">
+          <button class="modal__icon-close icon--close icon"></button>
+          <h2 class="modal__title">Обратная связь</h2>
+          <form class="modal__form form" action="#" method="POST">
             <div class="form__item">
               <input
                 class="form__input"
@@ -120,12 +120,37 @@
               ></textarea>
             </div>
           </form>
-          <p class="modal-feedback__text">
+          <p class="modal__text">
             Нажимая “отправить”, вы даете согласие на
             <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
             <a href="#">политикой конфиденциальности</a>
           </p>
-          <button type="submit" class="modal-feedback__submit form-button">
+          <button type="submit" class="modal__submit form-button">
+            Отправить
+          </button>
+        </div>
+      </aside>
+
+      <aside class="aside modal-call modal">
+        <div class="modal__wrap">
+          <button class="modal__icon-close icon--close icon"></button>
+          <h2 class="modal__title">Заказать звонок</h2>
+          <form class="modal__form form" action="#" method="POST">
+            <div class="form__item">
+              <input
+                class="form__input"
+                placeholder="Телефон"
+                type="tel"
+                required
+              />
+            </div>
+          </form>
+          <p class="modal__text">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+            <a href="#">политикой конфиденциальности</a>
+          </p>
+          <button type="submit" class="modal__submit form-button">
             Отправить
           </button>
         </div>
@@ -203,6 +228,18 @@
                   рекомендациям и, в свою очередь, советуют нас родным и
                   близким.
                 </p>
+                <p>
+                  Мы являемся авторизованным сервисным центром по ремонту
+                  техники Dell. Только у нас вы можете отремонтировать свой
+                  ноутбук Dell с официальной гарантией производителя.
+                </p>
+                <p>
+                  Мы успешно работаем с 1992 года и заслужили репутацию
+                  надежного партнера, что подтверждает большое количество
+                  постоянных клиентов. Мы гордимся тем, что к нам обращаются по
+                  рекомендациям и, в свою очередь, советуют нас родным и
+                  близким.
+                </p>
               </div>
               <button class="paragraph__read-more read-more">
                 <span class="read-more__arrow"></span>Читать далее
@@ -264,6 +301,18 @@
           <h3 class="repair__title">Ремонт различных видов техники</h3>
           <div class="repair__swiper buttons-block swiper-container">
             <div class="repair__list buttons-block__list swiper-wrapper">
+              <button class="repair__button buttons-block__button swiper-slide">
+                <h4>Ремонт ноутбуков</h4>
+              </button>
+              <button class="repair__button buttons-block__button swiper-slide">
+                <h4>Ремонт планшетов</h4>
+              </button>
+              <button class="repair__button buttons-block__button swiper-slide">
+                <h4>Ремонт ПК</h4>
+              </button>
+              <button class="repair__button buttons-block__button swiper-slide">
+                <h4>Ремонт мониторов</h4>
+              </button>
               <button class="repair__button buttons-block__button swiper-slide">
                 <h4>Ремонт ноутбуков</h4>
               </button>

@@ -16,7 +16,7 @@
     position: absolute;
     background: linear-gradient(
       270deg,
-      #f8f8f8 16.84%,
+      $background-body-color 16.84%,
       rgba(248, 248, 248, 0.0001) 100%
     );
     width: 24px;
@@ -49,7 +49,7 @@
 
   &__button {
     width: 240px;
-    background: #fff;
+    background: $background-item-color;
     position: relative;
     border: 1px solid #eaeaea;
     border-radius: 6px;

@@ -18,10 +18,10 @@
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #b5b6bc;
+  background-color: $input-text-color;
   opacity: 0.2;
 }
 .swiper-pagination-bullet-active {
-  background-color: #b5b6bc;
+  background-color: $input-text-color;
   opacity: 1;
 }

@@ -1,10 +1,6 @@
-@import "./service-links.scss";
-@import "./navigation.scss";
-@import "./paragraph.scss";
-@import "./read-more.scss";
-
 .service {
   padding-top: 12px;
+
   &__top {
     @media (min-width: 1440px) {
       display: flex;
@@ -14,12 +10,12 @@
   }
 
   &__header {
+    display: block;
+    padding: 20px 0;
+
     @media (min-width: 1440px) {
       display: inline-block;
     }
-
-    display: block;
-    padding: 20px 0;
 
     &::before {
       content: "";
@@ -52,7 +48,7 @@
       & a {
         position: relative;
         width: auto;
-        color: #1b1c21;
+        color: $dark-text-color;
         margin-right: 40px;
         padding-right: 50px;
 

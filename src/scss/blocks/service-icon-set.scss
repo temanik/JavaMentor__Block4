@@ -3,10 +3,6 @@
     display: flex;
   }
 
-  .icon {
-    margin: 0 8px;
-  }
-
   &__call-icon {
     background: $button-color url(../img/icons/call.svg) no-repeat center;
   }

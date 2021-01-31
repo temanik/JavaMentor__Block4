@@ -1,0 +1,58 @@
+.modal {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  right: -100%;
+  z-index: 200;
+  height: 100%;
+  width: 0%;
+  background: rgba($color: $background-item-color, $alpha: 0);
+  transition: 0.3s ease-in;
+  opacity: 0;
+
+  @media (min-width: 1440px) {
+    position: absolute;
+  }
+
+  & a {
+    color: $button-color;
+  }
+
+  &__wrap {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: -26px 0px 41px 7px rgba(65, 97, 122, 0.1);
+    max-width: 320px;
+    height: 100vh;
+    overflow-y: auto;
+    background: $background-item-color;
+    padding: 24px 16px;
+
+    @media (min-width: 768px) {
+      max-width: 440px;
+    }
+  }
+
+  &__icon-close {
+    flex: 0 0 40px;
+    margin: 0;
+  }
+
+  &__title {
+    padding-top: 36px;
+  }
+
+  &__submit {
+    align-self: flex-end;
+  }
+
+  &--show {
+    width: 100%;
+    right: 0px;
+    opacity: 1;
+    background: rgba($color: $background-item-color, $alpha: 0.95);
+    transition: 0.3s ease-out;
+  }
+}

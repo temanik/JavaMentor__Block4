@@ -3,9 +3,9 @@
   padding: 5px 5px 5px 40px;
   font-size: 16px;
   line-height: 24px;
-  color: #1b1c21;
+  color: $dark-text-color;
   font-weight: 500;
-  background-color: #f8f8f8;
+  background-color: $background-body-color;
 
   &__arrow {
     position: absolute;

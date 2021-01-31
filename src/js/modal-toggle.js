@@ -1,42 +1,40 @@
 export function modalToggle() {
   let activateElements;
   let modalWindow;
-  let content = document.querySelector(".content");
 
-  addModal(".left-menu__icon-burger", ".modal-menu");
-  addModal(".service-icon-set__chat-icon", ".modal-feedback");
+  addModal("left-menu__icon-burger", "modal-menu");
+  addModal("service-icon-set__chat-icon", "modal-feedback");
+  addModal("service-icon-set__call-icon", "modal-call");
 
   function addModal(activateElement, asideElement) {
-    let asideOpenStatus = false;
+    let activateElementsClass = activateElement;
+    let asideElementClass = asideElement;
 
-    activateElements = document.querySelectorAll(activateElement);
-    modalWindow = document.querySelector(asideElement);
+    activateElements = document.querySelectorAll("." + activateElementsClass);
+    modalWindow = document.querySelector("." + asideElementClass);
     modal(activateElements, modalWindow);
 
     function modal(activateElements, aside) {
       let closeElement = aside.querySelector(".icon--close");
       for (let i = 0; i < activateElements.length; i++) {
         activateElements[i].addEventListener("click", function (evt) {
-          aside.classList.add("show");
+          aside.classList.add(asideElementClass + "--show");
 
-          let asideWrap = aside.querySelector(asideElement + "__wrap");
+          let asideWrap = aside.querySelector(".modal__wrap");
+          console.log(asideWrap);
           asideWrap.addEventListener("click", function (evt) {
             evt.stopPropagation();
           });
-          asideOpenStatus = true;
           evt.stopPropagation();
         });
       }
 
       closeElement.addEventListener("click", function () {
-        aside.classList.remove("show");
+        aside.classList.remove(asideElementClass + "--show");
       });
 
       aside.addEventListener("click", function () {
-        if (asideOpenStatus) {
-          aside.classList.remove("show");
-          asideOpenStatus = false;
-        }
+        aside.classList.remove(asideElementClass + "--show");
       });
     }
   }

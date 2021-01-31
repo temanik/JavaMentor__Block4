@@ -7,6 +7,7 @@
     bottom: -5px;
     right: -5px;
   }
+
   &__request-link {
     transition: 0.2s;
 
@@ -14,10 +15,12 @@
       opacity: 0.9;
       transform: scale(1.1);
     }
+
     &::after {
       background: url(../img/icons/repair.svg) no-repeat;
     }
   }
+
   &__status-link {
     transition: 0.2s;
 
@@ -25,6 +28,7 @@
       opacity: 0.9;
       transform: scale(1.1);
     }
+
     &::after {
       background: url(../img/icons/checkstatus.svg) no-repeat;
     }

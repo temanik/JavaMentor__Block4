@@ -16,7 +16,7 @@
     text-align: center;
     font-size: 14px;
     line-height: 16px;
-    color: #7e7e82;
+    color: $light-text-color;
     opacity: 0.72;
 
     @media (min-width: 768px) {
@@ -34,9 +34,9 @@
         text-align: right;
       }
     }
-  }
 
-  &__item:not(:last-child) {
-    padding-bottom: 16px;
+    &:not(:last-child) {
+      padding-bottom: 16px;
+    }
   }
 }
