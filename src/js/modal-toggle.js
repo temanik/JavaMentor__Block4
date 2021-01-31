@@ -16,15 +16,26 @@ export function modalToggle() {
 
     function modal(activateElements, aside) {
       let closeElement = aside.querySelector(".icon--close");
+
       for (let i = 0; i < activateElements.length; i++) {
         activateElements[i].addEventListener("click", function (evt) {
           aside.classList.add(asideElementClass + "--show");
 
           let asideWrap = aside.querySelector(".modal__wrap");
-          console.log(asideWrap);
-          asideWrap.addEventListener("click", function (evt) {
-            evt.stopPropagation();
-          });
+          let asideMenuWrap = aside.querySelector(".modal-menu__wrap");
+
+          if (asideWrap) {
+            asideWrap.addEventListener("click", function (evt) {
+              evt.stopPropagation();
+            });
+          }
+
+          if (asideMenuWrap) {
+            asideMenuWrap.addEventListener("click", function (evt) {
+              evt.stopPropagation();
+            });
+          }
+
           evt.stopPropagation();
         });
       }
