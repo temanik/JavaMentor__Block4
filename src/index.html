@@ -13,75 +13,103 @@
     />
     <title>CPS - Ремонт компьютеров, ноутбуков, планшетов, мониторов</title>
   </head>
-  <body>
+  <body class="body">
+    <header class="header">
+      <div class="header__wrap">
+        <div class="header__left-menu left-menu">
+          <div class="left-menu__main-menu">
+            <button class="left-menu__icon-burger icon"></button>
+          </div>
+          <div class="left-menu__logo">
+            <a href="#"><img src="img/icons/Group.svg" alt="" /></a>
+          </div>
+        </div>
+        <div class="header__right-menu">
+          <div class="header__left-icons-part service-icon-set">
+            <button class="service-icon-set__call-icon icon"></button>
+            <button class="service-icon-set__chat-icon icon"></button>
+            <button class="service-icon-set__profile-icon icon"></button>
+          </div>
+          <div class="header__right-icons-part">
+            <button class="header__repair-icon icon"></button>
+            <button class="header__checkstatus-icon icon"></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <main class="content-wrap">
-      <aside class="aside modal-menu">
-        <div class="modal-menu__wrap">
-          <div class="modal-menu__header">
-            <button class="modal-menu__burger icon icon--close"></button>
-            <div class="modal-menu__logo">
-              <a href="#"><img src="img/icons/Group.svg" alt="" /></a>
-            </div>
-            <button class="modal-menu__search icon"></button>
-          </div>
-          <div class="modal-menu__navigation">
-            <ul class="modal-menu__navigation-items">
-              <li class="modal-menu__navigation-item">
-                <a href="#">Ремонт техники</a>
-              </li>
-              <li
-                class="modal-menu__navigation-item modal-menu__navigation-item--selected"
-              >
-                <a href="#">Услуги и сервисы</a>
-              </li>
-              <li class="modal-menu__navigation-item">
-                <a href="#">Корпоративным клиентам</a>
-              </li>
-              <li class="modal-menu__navigation-item">
-                <a href="#">Продавцам техники</a>
-              </li>
-              <li class="modal-menu__navigation-item">
-                <a href="#">Партнерам</a>
-              </li>
-              <li class="modal-menu__navigation-item">
-                <a href="#">Производителям</a>
-              </li>
-              <li class="modal-menu__navigation-item">
-                <a href="#">Наши сервисные центры</a>
-              </li>
-              <li class="modal-menu__navigation-item">
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </div>
-          <div class="modal-menu__footer">
-            <div class="modal-menu__footer-icons">
-              <div class="modal-menu__footer-icon-set service-icon-set">
-                <button class="service-icon-set__call-icon icon"></button>
-                <button class="service-icon-set__chat-icon icon"></button>
-                <button class="service-icon-set__profile-icon icon"></button>
+      <aside class="modal-left-menu modal modal--left">
+        <div class="modal__wrap">
+          <div class="modal-menu">
+            <div class="modal-menu__header">
+              <button class="modal-menu__burger icon icon--close"></button>
+              <div class="modal-menu__logo">
+                <a class="link" href="#"
+                  ><img src="img/icons/Group.svg" alt=""
+                /></a>
               </div>
+              <button class="modal-menu__search icon"></button>
             </div>
-            <div class="modal-menu__footer-mail">
-              <a href="#">mail@cps.com</a>
+            <div class="modal-menu__navigation">
+              <ul class="modal-menu__navigation-items">
+                <li class="modal-menu__navigation-item">
+                  <a class="link" href="#">Ремонт техники</a>
+                </li>
+                <li
+                  class="modal-menu__navigation-item modal-menu__navigation-item--selected"
+                >
+                  <a class="link" href="#">Услуги и сервисы</a>
+                </li>
+                <li class="modal-menu__navigation-item">
+                  <a class="link" href="#">Корпоративным клиентам</a>
+                </li>
+                <li class="modal-menu__navigation-item">
+                  <a class="link" href="#">Продавцам техники</a>
+                </li>
+                <li class="modal-menu__navigation-item">
+                  <a class="link" href="#">Партнерам</a>
+                </li>
+                <li class="modal-menu__navigation-item">
+                  <a class="link" href="#">Производителям</a>
+                </li>
+                <li class="modal-menu__navigation-item">
+                  <a class="link" href="#">Наши сервисные центры</a>
+                </li>
+                <li class="modal-menu__navigation-item">
+                  <a class="link" href="#">Контакты</a>
+                </li>
+              </ul>
             </div>
-            <div class="modal-menu__footer-phone-number">
-              <a href="#">8 800 890 8900</a>
-            </div>
-            <div class="modal-menu__footer-language-change language-change">
-              <button
-                class="language-change__button language-change__button--selected"
-              >
-                RU
-              </button>
-              <button class="language-change__button">EN</button>
-              <button class="language-change__button">CH</button>
+            <div class="modal-menu__footer">
+              <div class="modal-menu__footer-icons">
+                <div class="modal-menu__footer-icon-set service-icon-set">
+                  <button class="service-icon-set__call-icon icon"></button>
+                  <button class="service-icon-set__chat-icon icon"></button>
+                  <button class="service-icon-set__profile-icon icon"></button>
+                </div>
+              </div>
+              <div class="modal-menu__footer-mail">
+                <a href="#">mail@cps.com</a>
+              </div>
+              <div class="modal-menu__footer-phone-number">
+                <a href="#">8 800 890 8900</a>
+              </div>
+              <div class="modal-menu__footer-language-change language-change">
+                <button
+                  class="language-change__button language-change__button--selected"
+                >
+                  RU
+                </button>
+                <button class="language-change__button">EN</button>
+                <button class="language-change__button">CH</button>
+              </div>
             </div>
           </div>
         </div>
       </aside>
 
-      <aside class="aside modal-feedback modal">
+      <aside class="modal-feedback modal modal--right">
         <div class="modal__wrap">
           <button class="modal__icon-close icon--close icon"></button>
           <h2 class="modal__title">Обратная связь</h2>
@@ -131,7 +159,7 @@
         </div>
       </aside>
 
-      <aside class="aside modal-call modal">
+      <aside class="modal-call modal modal--right">
         <div class="modal__wrap">
           <button class="modal__icon-close icon--close icon"></button>
           <h2 class="modal__title">Заказать звонок</h2>
@@ -157,30 +185,6 @@
       </aside>
 
       <div class="content">
-        <header class="header">
-          <div class="header__wrap">
-            <div class="header__left-menu left-menu">
-              <div class="left-menu__main-menu">
-                <button class="left-menu__icon-burger icon"></button>
-              </div>
-              <div class="left-menu__logo">
-                <a href="#"><img src="img/icons/Group.svg" alt="" /></a>
-              </div>
-            </div>
-            <div class="header__right-menu">
-              <div class="header__left-icons-part service-icon-set">
-                <button class="service-icon-set__call-icon icon"></button>
-                <button class="service-icon-set__chat-icon icon"></button>
-                <button class="service-icon-set__profile-icon icon"></button>
-              </div>
-              <div class="header__right-icons-part">
-                <button class="header__repair-icon icon"></button>
-                <button class="header__checkstatus-icon icon"></button>
-              </div>
-            </div>
-          </div>
-        </header>
-
         <section class="service">
           <div class="service__top">
             <h2 class="service__header">Услуги и сервисы</h2>

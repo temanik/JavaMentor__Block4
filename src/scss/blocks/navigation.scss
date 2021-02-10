@@ -12,7 +12,7 @@
     height: 40px;
     width: 20px;
     right: 0;
-    top: 0;
+    top: 18px;
 
     @media (min-width: 1440px) {
       display: none;
@@ -24,6 +24,11 @@
     overflow: auto;
     align-items: center;
     position: relative;
+    list-style: none;
+    padding-left: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 16px 0;
 
     @media (min-width: 1440px) {
       overflow: visible;
@@ -42,7 +47,6 @@
       font-weight: 500;
       color: $light-text-color;
       white-space: nowrap;
-      height: 40px;
       padding: 8px 14px;
     }
 

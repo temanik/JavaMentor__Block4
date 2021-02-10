@@ -1,22 +1,10 @@
 .modal-menu {
   display: flex;
-  position: fixed;
-  left: -320px;
-  z-index: 200;
-  height: 100vh;
-  width: 200px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background: rgba($color: $background-item-color, $alpha: 0);
-  transition: 0.3s ease-in-out;
+  flex-direction: column;
+  min-width: 320px;
+  background: $background-item-color;
 
   @media (min-width: 1440px) {
-    position: static;
-    display: flex;
-    flex: 1 0 320px;
-    height: auto;
-    background: $background-item-color;
-    overflow: hidden;
   }
 
   &__wrap {
@@ -24,9 +12,6 @@
     flex-direction: column;
     box-shadow: 26px 0px 41px 7px rgba(65, 97, 122, 0.1);
     width: 320px;
-    height: 100vh;
-    min-height: 676px;
-    background: $background-item-color;
 
     @media (min-width: 1440px) {
       box-shadow: none;
@@ -35,8 +20,8 @@
 
   &__header {
     display: flex;
-    flex: 0 0 88px;
-    padding: 0 16px;
+    flex: 0 0;
+    padding: 16px;
     align-items: center;
   }
 
@@ -68,6 +53,8 @@
   &__navigation-items {
     display: flex;
     flex-direction: column;
+    list-style: none;
+    padding-left: 0;
   }
 
   &__navigation-item {
@@ -83,8 +70,6 @@
 
     & a {
       display: block;
-      width: 100%;
-      height: 100%;
       padding: 10px 16px;
 
       @media (min-width: 1440px) {
@@ -114,9 +99,12 @@
   }
 
   &__footer {
-    width: 100%;
     padding: 16px;
     margin-top: auto;
+
+    @media (min-width: 1440px) {
+      padding: 24px;
+    }
 
     &-icons {
       position: relative;

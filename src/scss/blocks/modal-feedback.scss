@@ -1,9 +1,7 @@
-.modal-feedback {
-  &--show {
-    width: 100%;
-    right: 0px;
-    opacity: 1;
-    background: rgba($color: $background-item-color, $alpha: 0.95);
-    transition: 0.3s ease-out;
-  }
-}
+// .modal-feedback {
+//   &--show {
+//     opacity: 1;
+//     background: rgba($color: $background-item-color, $alpha: 0.95);
+//     transform: translateX(0%);
+//   }
+// }

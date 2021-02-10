@@ -11,7 +11,7 @@
   }
 
   &__swiper {
-    height: 260px;
+    height: 280px;
     margin: 0 -16px;
     padding: 0 16px;
     overflow: hidden;
@@ -69,10 +69,9 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    background: $background-item-color;
-    height: 200px;
+    height: 178px;
     border: none;
-    width: 260px;
+    width: 240px;
     background: $background-item-color;
     border-radius: 6px;
     padding: 16px;
@@ -119,6 +118,7 @@
   }
 
   &__item-title {
+    margin-bottom: 6px;
     @media (min-width: 768px) {
       display: none;
     }
@@ -161,6 +161,7 @@
   }
 
   &__offer {
+    padding: 0;
     position: relative;
     padding-right: 14px;
     font-weight: 500;
@@ -168,6 +169,7 @@
     font-size: 16px;
     line-height: 24px;
     text-align: left;
+    border: none;
 
     &:hover {
       text-decoration: underline;

@@ -22,6 +22,10 @@
   &__button {
     height: 72px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     & img {
       margin: auto 0;
     }

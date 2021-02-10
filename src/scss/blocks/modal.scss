@@ -1,34 +1,25 @@
 .modal {
   display: flex;
-  justify-content: flex-end;
   position: fixed;
-  right: -100%;
-  z-index: 200;
-  height: 100%;
-  width: 0%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
   background: rgba($color: $background-item-color, $alpha: 0);
-  transition: 0.3s ease-in;
+  transition: transform 0.3s ease-in;
   opacity: 0;
-
-  @media (min-width: 1440px) {
-    position: absolute;
-  }
-
-  & a {
-    color: $button-color;
-  }
+  z-index: 1;
 
   &__wrap {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 16px;
     box-shadow: -26px 0px 41px 7px rgba(65, 97, 122, 0.1);
     max-width: 320px;
-    height: 100vh;
-    overflow-y: auto;
+    overflow: scroll;
+    min-height: 100vh;
     background: $background-item-color;
-    padding: 24px 16px;
 
     @media (min-width: 768px) {
       max-width: 440px;
@@ -48,11 +39,21 @@
     align-self: flex-end;
   }
 
+  &--right {
+    justify-content: flex-end;
+    transform: translateX(100vw);
+    transition: transform 0.3s ease-in;
+  }
+
+  &--left {
+    transform: translateX(-100vw);
+    transition: transform 0.3s ease-in;
+  }
+
   &--show {
     width: 100%;
-    right: 0px;
     opacity: 1;
     background: rgba($color: $background-item-color, $alpha: 0.95);
-    transition: 0.3s ease-out;
+    transform: translateX(0vw);
   }
 }

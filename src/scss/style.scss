@@ -6,7 +6,7 @@ $background-body-color: #f8f8f8;
 $background-item-color: #ffffff;
 
 @import "./swiper.scss";
-@import "./style-reset.scss";
+@import "./normalize.scss";
 @import "./font-face.scss";
 @import "./common-style.scss";
 @import "./blocks/brands.scss";
@@ -19,6 +19,7 @@ $background-item-color: #ffffff;
 @import "./blocks/language-change.scss";
 @import "./blocks/left-menu.scss";
 @import "./blocks/modal.scss";
+@import "./blocks/modal-left-menu.scss";
 @import "./blocks/modal-call.scss";
 @import "./blocks/modal-feedback.scss";
 @import "./blocks/modal-menu.scss";

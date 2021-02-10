@@ -1,10 +1,22 @@
 export function modalToggle() {
   let activateElements;
   let modalWindow;
+  let body = document.querySelector(".body");
+  let contentWrapElement = document.querySelector(".content-wrap");
 
-  addModal("left-menu__icon-burger", "modal-menu");
   addModal("service-icon-set__chat-icon", "modal-feedback");
   addModal("service-icon-set__call-icon", "modal-call");
+
+  console.log(window.screen.availWidth >= 1440);
+  if (window.screen.availWidth < 1440) {
+    addModal("left-menu__icon-burger", "modal-left-menu");
+  } else {
+    let modal = document.querySelector(".modal-left-menu");
+    let modalWrap = modal.querySelector(".modal__wrap");
+
+    modal.classList.remove("modal", "modal--left");
+    modalWrap.classList.remove("modal__wrap");
+  }
 
   function addModal(activateElement, asideElement) {
     let activateElementsClass = activateElement;
@@ -12,44 +24,67 @@ export function modalToggle() {
 
     activateElements = document.querySelectorAll("." + activateElementsClass);
     modalWindow = document.querySelector("." + asideElementClass);
-    modal(activateElements, modalWindow);
 
-    function modal(activateElements, aside) {
-      let closeElement = aside.querySelector(".icon--close");
+    asideElementClass = "modal";
 
-      for (let i = 0; i < activateElements.length; i++) {
-        activateElements[i].addEventListener("click", function (evt) {
-          aside.classList.add(asideElementClass + "--show");
+    // console.log(f);
 
-          let asideWrap = aside.querySelector(".modal__wrap");
-          let asideMenuWrap = aside.querySelector(".modal-menu__wrap");
+    let closeElement = modalWindow.querySelector(".icon--close");
+    console.log(modalWindow);
 
-          if (asideWrap) {
-            asideWrap.addEventListener("click", function (evt) {
-              evt.stopPropagation();
-            });
-          }
+    modalOpen(activateElements, modalWindow, asideElementClass);
 
-          if (asideMenuWrap) {
-            asideMenuWrap.addEventListener("click", function (evt) {
-              evt.stopPropagation();
-            });
-          }
+    modalClose(closeElement, modalWindow, asideElementClass);
+    modalClose(modalWindow, modalWindow, asideElementClass);
+  }
 
-          evt.stopPropagation();
-        });
-      }
+  function modalOpen(activateElements, aside, asideElementClass) {
+    for (let i = 0; i < activateElements.length; i++) {
+      activateElements[i].addEventListener("click", function (evt) {
+        let asideWrap = aside.querySelector(".modal__wrap");
+        let asideMenuWrap = aside.querySelector(".modal-menu__wrap");
 
-      closeElement.addEventListener("click", function () {
-        aside.classList.remove(asideElementClass + "--show");
-      });
+        aside.classList.add(asideElementClass + "--show");
+        body.classList.add("body--open-modal");
 
-      aside.addEventListener("click", function () {
-        aside.classList.remove(asideElementClass + "--show");
+        // When the modal is shown, we want a fixed body
+        contentWrapElement.style.top = `-${window.scrollY}px`;
+        contentWrapElement.style.position = "fixed";
+
+        if (asideWrap) {
+          asideWrap.addEventListener("click", function (evt) {
+            evt.stopPropagation();
+          });
+        }
+
+        if (asideMenuWrap) {
+          asideMenuWrap.addEventListener("click", function (evt) {
+            evt.stopPropagation();
+          });
+        }
+
+        evt.stopPropagation();
       });
     }
   }
-  // document.addEventListener("click", function (evt) {
-  //   console.log(evt.target);
-  // });
+
+  function modalClose(closeElement, aside, asideElementClass) {
+    // console.log(asideElementClass);
+    closeElement.addEventListener("click", function () {
+      setTimeout(() => {
+        aside.classList.remove(asideElementClass + "--show");
+        body.classList.remove("body--open-modal");
+      }, 300);
+
+      // Когда модальное окно скрыто...
+      const scrollY = contentWrapElement.style.top;
+      contentWrapElement.style.position = "";
+      contentWrapElement.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    });
+  }
+
+  document.addEventListener("click", function (evt) {
+    // console.log(evt.target);
+  });
 }
