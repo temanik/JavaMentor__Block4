@@ -5,24 +5,44 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  background: rgba($color: $background-item-color, $alpha: 0);
-  transition: transform 0.3s ease-in;
-  opacity: 0;
-  z-index: 1;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.2s linear, transform 0s linear 0.3s;
+  z-index: 200;
+  display: none;
 
-  &__wrap {
-    position: absolute;
+  &__inner {
+    padding: 24px 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    box-shadow: -26px 0px 41px 7px rgba(65, 97, 122, 0.1);
+  }
+
+  &__wrap {
     max-width: 320px;
     overflow: scroll;
     min-height: 100vh;
     background: $background-item-color;
+    transition: transform 0.3s linear;
 
     @media (min-width: 768px) {
       max-width: 440px;
+    }
+
+    &--left {
+      box-shadow: 26px 0px 41px 7px rgba(65, 97, 122, 0.1);
+      transform: translateX(-100vw);
+      transition: transform 0.3s linear;
+    }
+
+    &--right {
+      box-shadow: -26px 0px 41px 7px rgba(65, 97, 122, 0.1);
+      transform: translateX(100vw);
+      transition: transform 0.3s linear;
+    }
+
+    &--show {
+      transform: translateX(0vw);
+      transition: transform 0.3s linear;
     }
   }
 
@@ -42,18 +62,16 @@
   &--right {
     justify-content: flex-end;
     transform: translateX(100vw);
-    transition: transform 0.3s ease-in;
   }
 
   &--left {
     transform: translateX(-100vw);
-    transition: transform 0.3s ease-in;
   }
 
   &--show {
     width: 100%;
-    opacity: 1;
-    background: rgba($color: $background-item-color, $alpha: 0.95);
+    background: rgba(255, 255, 255, 0.95);
     transform: translateX(0vw);
+    transition: background 0.2s linear;
   }
 }

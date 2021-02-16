@@ -3,6 +3,7 @@
   flex-direction: column;
   min-width: 320px;
   background: $background-item-color;
+  min-height: 100vh;
 
   @media (min-width: 1440px) {
   }
@@ -62,10 +63,10 @@
     font-weight: 500;
     color: $dark-text-color;
     position: relative;
-    transition: 0.2s;
+    transition: background 0.2s;
 
     &:hover {
-      background: rgba(126, 126, 130, 0.1);
+      background: $item-hover;
     }
 
     & a {

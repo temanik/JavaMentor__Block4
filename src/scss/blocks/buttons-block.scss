@@ -37,7 +37,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
-      transition: 0.5s;
     }
 
     @media (min-width: 1120px) {
@@ -58,10 +57,10 @@
     @media (min-width: 768px) {
       flex: 0 1 31%;
       text-align: left;
-      transition: 0.2s;
+      transition: background 0.2s;
 
       &:hover {
-        background: rgba(126, 126, 130, 0.1);
+        background: $item-hover;
       }
     }
 

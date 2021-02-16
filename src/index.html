@@ -14,38 +14,14 @@
     <title>CPS - Ремонт компьютеров, ноутбуков, планшетов, мониторов</title>
   </head>
   <body class="body">
-    <header class="header">
-      <div class="header__wrap">
-        <div class="header__left-menu left-menu">
-          <div class="left-menu__main-menu">
-            <button class="left-menu__icon-burger icon"></button>
-          </div>
-          <div class="left-menu__logo">
-            <a href="#"><img src="img/icons/Group.svg" alt="" /></a>
-          </div>
-        </div>
-        <div class="header__right-menu">
-          <div class="header__left-icons-part service-icon-set">
-            <button class="service-icon-set__call-icon icon"></button>
-            <button class="service-icon-set__chat-icon icon"></button>
-            <button class="service-icon-set__profile-icon icon"></button>
-          </div>
-          <div class="header__right-icons-part">
-            <button class="header__repair-icon icon"></button>
-            <button class="header__checkstatus-icon icon"></button>
-          </div>
-        </div>
-      </div>
-    </header>
-
     <main class="content-wrap">
       <aside class="modal-left-menu modal modal--left">
-        <div class="modal__wrap">
+        <div class="modal__wrap modal__wrap--left">
           <div class="modal-menu">
             <div class="modal-menu__header">
               <button class="modal-menu__burger icon icon--close"></button>
               <div class="modal-menu__logo">
-                <a class="link" href="#"
+                <a class="link link--black" href="#"
                   ><img src="img/icons/Group.svg" alt=""
                 /></a>
               </div>
@@ -90,10 +66,10 @@
                 </div>
               </div>
               <div class="modal-menu__footer-mail">
-                <a href="#">mail@cps.com</a>
+                <a class="link" href="#">mail@cps.com</a>
               </div>
               <div class="modal-menu__footer-phone-number">
-                <a href="#">8 800 890 8900</a>
+                <a class="link" href="#">8 800 890 8900</a>
               </div>
               <div class="modal-menu__footer-language-change language-change">
                 <button
@@ -110,110 +86,144 @@
       </aside>
 
       <aside class="modal-feedback modal modal--right">
-        <div class="modal__wrap">
-          <button class="modal__icon-close icon--close icon"></button>
-          <h2 class="modal__title">Обратная связь</h2>
-          <form class="modal__form form" action="#" method="POST">
-            <div class="form__item">
-              <input
-                class="form__input"
-                placeholder="Имя"
-                type="text"
-                required
-              />
-            </div>
-            <div class="form__item">
-              <input
-                class="form__input"
-                placeholder="Телефон"
-                type="tel"
-                required
-              />
-            </div>
-            <div class="form__item">
-              <input
-                class="form__input"
-                placeholder="Электронная почта"
-                type="email"
-                required
-              />
-            </div>
-            <div class="form__item">
-              <textarea
-                class="form__textarea"
-                placeholder="Сообщение"
-                name="message"
-                cols="30"
-                rows="10"
-              ></textarea>
-            </div>
-          </form>
-          <p class="modal__text">
-            Нажимая “отправить”, вы даете согласие на
-            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-            <a href="#">политикой конфиденциальности</a>
-          </p>
-          <button type="submit" class="modal__submit form-button">
-            Отправить
-          </button>
+        <div class="modal__wrap modal__wrap--right">
+          <div class="modal__inner">
+            <button class="modal__icon-close icon--close icon"></button>
+            <h2 class="modal__title">Обратная связь</h2>
+            <form class="modal__form form" action="#" method="POST">
+              <div class="form__item">
+                <input
+                  class="form__input"
+                  placeholder="Имя"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <input
+                  class="form__input"
+                  placeholder="Телефон"
+                  type="tel"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <input
+                  class="form__input"
+                  placeholder="Электронная почта"
+                  type="email"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <textarea
+                  class="form__textarea"
+                  placeholder="Сообщение"
+                  name="message"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+            </form>
+            <p class="modal__text">
+              Нажимая “отправить”, вы даете согласие на
+              <a class="link" href="#">обработку персональных данных</a> и
+              соглашаетесь с нашей
+              <a class="link" href="#">политикой конфиденциальности</a>
+            </p>
+            <button type="submit" class="modal__submit form-button">
+              Отправить
+            </button>
+          </div>
         </div>
       </aside>
 
       <aside class="modal-call modal modal--right">
-        <div class="modal__wrap">
-          <button class="modal__icon-close icon--close icon"></button>
-          <h2 class="modal__title">Заказать звонок</h2>
-          <form class="modal__form form" action="#" method="POST">
-            <div class="form__item">
-              <input
-                class="form__input"
-                placeholder="Телефон"
-                type="tel"
-                required
-              />
-            </div>
-          </form>
-          <p class="modal__text">
-            Нажимая “отправить”, вы даете согласие на
-            <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-            <a href="#">политикой конфиденциальности</a>
-          </p>
-          <button type="submit" class="modal__submit form-button">
-            Отправить
-          </button>
+        <div class="modal__wrap modal__wrap--right">
+          <div class="modal__inner">
+            <button class="modal__icon-close icon--close icon"></button>
+            <h2 class="modal__title">Заказать звонок</h2>
+            <form class="modal__form form" action="#" method="POST">
+              <div class="form__item">
+                <input
+                  class="form__input"
+                  placeholder="Телефон"
+                  type="tel"
+                  required
+                />
+              </div>
+            </form>
+            <p class="modal__text">
+              Нажимая “отправить”, вы даете согласие на
+              <a class="link" href="#">обработку персональных данных</a> и
+              соглашаетесь с нашей
+              <a class="link" href="#">политикой конфиденциальности</a>
+            </p>
+            <button type="submit" class="modal__submit form-button">
+              Отправить
+            </button>
+          </div>
         </div>
       </aside>
+
+      <header class="header">
+        <div class="header__wrap">
+          <div class="header__left-menu left-menu">
+            <div class="left-menu__main-menu">
+              <button class="left-menu__icon-burger icon"></button>
+            </div>
+            <div class="left-menu__logo">
+              <a class="link" href="#"
+                ><img src="img/icons/Group.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="header__right-menu">
+            <div class="header__left-icons-part service-icon-set">
+              <button class="service-icon-set__call-icon icon"></button>
+              <button class="service-icon-set__chat-icon icon"></button>
+              <button class="service-icon-set__profile-icon icon"></button>
+            </div>
+            <div class="header__right-icons-part">
+              <button class="header__repair-icon icon"></button>
+              <button class="header__checkstatus-icon icon"></button>
+            </div>
+          </div>
+        </div>
+      </header>
 
       <div class="content">
         <section class="service">
           <div class="service__top">
             <h2 class="service__header">Услуги и сервисы</h2>
             <div class="service__links service-links">
-              <a class="service-links__request-link" href="#"
+              <a class="service-links__request-link link" href="#"
                 >Оставить заявку</a
               >
-              <a class="service-links__status-link" href="#">Статус ремонта</a>
+              <a class="service-links__status-link link" href="#"
+                >Статус ремонта</a
+              >
             </div>
           </div>
           <nav class="service__navigation navigation">
             <ul class="navigation__items">
               <li class="navigation__item navigation__item--selected">
-                <a href="#">Ремонтируемые бренды</a>
+                <a class="link" href="#">Ремонтируемые бренды</a>
               </li>
               <li class="navigation__item">
-                <a href="#">Ремонтируемые устройства</a>
+                <a class="link" href="#">Ремонтируемые устройства</a>
               </li>
               <li class="navigation__item">
-                <a href="#">Цены на услуги</a>
+                <a class="link" href="#">Цены на услуги</a>
               </li>
               <li class="navigation__item">
-                <a href="#">Адреса сервисных центров</a>
+                <a class="link" href="#">Адреса сервисных центров</a>
               </li>
               <li class="navigation__item">
-                <a href="#">Специальные цены</a>
+                <a class="link" href="#">Специальные цены</a>
               </li>
               <li class="navigation__item">
-                <a href="#">Отзывы</a>
+                <a class="link" href="#">Отзывы</a>
               </li>
             </ul>
           </nav>
@@ -459,10 +469,12 @@
         </section>
 
         <footer class="footer">
-          <a class="footer__item" href="#"
+          <a class="link" class="footer__item" href="#"
             ><span>© 2019 CPS</span> Разработано командой Apesong
           </a>
-          <a class="footer__item" href="#">Политика конфиденциальности</a>
+          <a class="link" class="footer__item" href="#"
+            >Политика конфиденциальности</a
+          >
           <p class="footer__item">
             Информация, размещенная на данной странице, не является публичной
             офертой

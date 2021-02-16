@@ -21,6 +21,7 @@
 }
 
 h2 {
+  color: $dark-text-color;
   font-size: 28px;
   line-height: 40px;
   font-weight: bold;
@@ -79,13 +80,14 @@ button {
 }
 
 .content-wrap {
-  padding-top: 89px;
+  padding-top: $header-margin-top;
   width: 100vw;
   max-width: 1120px;
   position: relative;
   overflow: hidden;
 
   @media (min-width: 1440px) {
+    padding-top: 0;
     max-width: 1440px;
     display: flex;
   }
@@ -109,10 +111,26 @@ button {
 }
 
 a.link {
-  color: #000;
   text-decoration: none;
+  color: $dark-text-color;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  &--black {
+    color: $dark-text-color;
+
+    &:visited {
+      color: $dark-text-color;
+    }
+  }
+
+  &--grey {
+    color: $light-text-color;
+
+    &:visited {
+      color: $light-text-color;
+    }
   }
 }

@@ -7,7 +7,6 @@ export function modalToggle() {
   addModal("service-icon-set__chat-icon", "modal-feedback");
   addModal("service-icon-set__call-icon", "modal-call");
 
-  console.log(window.screen.availWidth >= 1440);
   if (window.screen.availWidth < 1440) {
     addModal("left-menu__icon-burger", "modal-left-menu");
   } else {
@@ -15,7 +14,7 @@ export function modalToggle() {
     let modalWrap = modal.querySelector(".modal__wrap");
 
     modal.classList.remove("modal", "modal--left");
-    modalWrap.classList.remove("modal__wrap");
+    modalWrap.classList.remove("modal__wrap", "modal__wrap--left");
   }
 
   function addModal(activateElement, asideElement) {
@@ -26,8 +25,6 @@ export function modalToggle() {
     modalWindow = document.querySelector("." + asideElementClass);
 
     asideElementClass = "modal";
-
-    // console.log(f);
 
     let closeElement = modalWindow.querySelector(".icon--close");
     console.log(modalWindow);
@@ -44,8 +41,13 @@ export function modalToggle() {
         let asideWrap = aside.querySelector(".modal__wrap");
         let asideMenuWrap = aside.querySelector(".modal-menu__wrap");
 
-        aside.classList.add(asideElementClass + "--show");
-        body.classList.add("body--open-modal");
+        aside.style.display = "flex";
+
+        setTimeout(() => {
+          aside.classList.add(asideElementClass + "--show");
+          asideWrap.classList.add("modal__wrap--show");
+          body.classList.add("body--open-modal");
+        }, 0);
 
         // When the modal is shown, we want a fixed body
         contentWrapElement.style.top = `-${window.scrollY}px`;
@@ -71,8 +73,12 @@ export function modalToggle() {
   function modalClose(closeElement, aside, asideElementClass) {
     // console.log(asideElementClass);
     closeElement.addEventListener("click", function () {
+      let asideWrap = aside.querySelector(".modal__wrap");
+      asideWrap.classList.remove("modal__wrap--show");
+      aside.classList.remove(asideElementClass + "--show");
       setTimeout(() => {
-        aside.classList.remove(asideElementClass + "--show");
+        aside.style.display = "";
+        console.log(aside);
         body.classList.remove("body--open-modal");
       }, 300);
 
