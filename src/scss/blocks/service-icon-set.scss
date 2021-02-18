@@ -1,4 +1,6 @@
 .service-icon-set {
+  gap: 16px;
+
   @media (min-width: 768px) {
     display: flex;
   }

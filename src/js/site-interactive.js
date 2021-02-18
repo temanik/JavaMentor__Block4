@@ -14,8 +14,8 @@ export function interactive() {
     for (let i = 0; i < navigationItems.length; i++) {
       navigationItems[i].addEventListener("click", function (evt) {
         let selectedClass = navigationItemName + "--selected";
-        let newElement = evt.path[1];
         let oldElement = document.querySelector("." + selectedClass);
+        let newElement = this;
 
         evt.stopPropagation();
 

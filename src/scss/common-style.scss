@@ -5,19 +5,12 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  font-family: "TT Lakes";
+  font-family: "TT Lakes", Verdana, Geneva, Tahoma, sans-serif;
   background-color: $background-body-color;
   font-size: 16px;
   line-height: 24px;
   transition: transform 0.2s ease;
-
-  &--open-modal {
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-      width: 17px;
-    }
-  }
+  overflow-y: scroll;
 }
 
 h2 {
@@ -25,6 +18,7 @@ h2 {
   font-size: 28px;
   line-height: 40px;
   font-weight: bold;
+  margin: 0;
 }
 h3 {
   font-size: 16px;
@@ -68,7 +62,6 @@ h5 {
 }
 
 p {
-  font-family: TT Lakes;
   font-size: 15px;
   line-height: 20px;
   margin: 0;
@@ -95,7 +88,6 @@ button {
 
 .content {
   padding: 0 16px;
-  transition: opacity 0.2s ease-in-out;
 
   @media (min-width: 768px) {
     padding: 0 24px;
@@ -106,31 +98,6 @@ button {
   }
 
   @media (min-width: 1440px) {
-    margin-top: 0;
-  }
-}
-
-a.link {
-  text-decoration: none;
-  color: $dark-text-color;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &--black {
-    color: $dark-text-color;
-
-    &:visited {
-      color: $dark-text-color;
-    }
-  }
-
-  &--grey {
-    color: $light-text-color;
-
-    &:visited {
-      color: $light-text-color;
-    }
+    margin-top: 22px;
   }
 }

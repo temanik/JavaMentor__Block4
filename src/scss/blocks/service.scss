@@ -40,12 +40,11 @@
       display: flex;
       align-items: center;
       justify-content: right;
-      font-family: TT Lakes;
       font-size: 16px;
       line-height: 24px;
       font-weight: 500;
 
-      & a {
+      & > .link {
         position: relative;
         width: auto;
         color: $dark-text-color;

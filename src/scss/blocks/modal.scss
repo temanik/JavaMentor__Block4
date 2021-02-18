@@ -1,5 +1,4 @@
 .modal {
-  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,11 +14,16 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    overflow-y: scroll;
+    height: calc(100vh - 48px);
+
+    @media (min-width: 768px) {
+      padding: 24px;
+    }
   }
 
   &__wrap {
     max-width: 320px;
-    overflow: scroll;
     min-height: 100vh;
     background: $background-item-color;
     transition: transform 0.3s linear;
@@ -49,10 +53,32 @@
   &__icon-close {
     flex: 0 0 40px;
     margin: 0;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      left: -65px;
+      top: 40px;
+    }
   }
 
   &__title {
-    padding-top: 36px;
+    position: relative;
+    padding-top: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #41f6d7;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      width: 4px;
+      height: 40px;
+      left: -16px;
+
+      @media (min-width: 768px) {
+        left: -24px;
+      }
+    }
   }
 
   &__submit {
@@ -61,17 +87,11 @@
 
   &--right {
     justify-content: flex-end;
-    transform: translateX(100vw);
-  }
-
-  &--left {
-    transform: translateX(-100vw);
   }
 
   &--show {
     width: 100%;
     background: rgba(255, 255, 255, 0.95);
-    transform: translateX(0vw);
     transition: background 0.2s linear;
   }
 }

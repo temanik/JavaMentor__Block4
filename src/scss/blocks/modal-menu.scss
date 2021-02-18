@@ -69,16 +69,20 @@
       background: $item-hover;
     }
 
-    & a {
+    & > .link {
       display: block;
       padding: 10px 16px;
 
+      @media (min-width: 768px) {
+        padding: 10px 24px;
+      }
+
       @media (min-width: 1440px) {
-        padding: 22px;
+        padding: 20px 24px;
       }
     }
 
-    &--selected a {
+    &--selected > .link {
       color: $light-text-color;
 
       &::before {
@@ -93,7 +97,7 @@
         top: 2px;
 
         @media (min-width: 1440px) {
-          top: 14px;
+          top: 12px;
         }
       }
     }
@@ -103,13 +107,8 @@
     padding: 16px;
     margin-top: auto;
 
-    @media (min-width: 1440px) {
+    @media (min-width: 768px) {
       padding: 24px;
-    }
-
-    &-icons {
-      position: relative;
-      left: -10px;
     }
 
     &-mail {

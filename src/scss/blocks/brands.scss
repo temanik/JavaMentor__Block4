@@ -16,6 +16,7 @@
     @media (min-width: 768px) {
       height: auto;
       max-height: 110px;
+      transition: max-height 0.2s ease-in-out;
     }
   }
 

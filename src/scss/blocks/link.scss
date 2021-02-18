@@ -1,0 +1,32 @@
+.link {
+  text-decoration: none;
+  color: $dark-text-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--black {
+    color: $dark-text-color;
+
+    &:visited {
+      color: $dark-text-color;
+    }
+  }
+
+  &--grey {
+    color: $light-text-color;
+
+    &:visited {
+      color: $light-text-color;
+    }
+  }
+
+  &--pink {
+    color: $button-color;
+
+    &:visited {
+      color: $button-color;
+    }
+  }
+}

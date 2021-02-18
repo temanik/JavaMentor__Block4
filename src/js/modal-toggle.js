@@ -27,7 +27,6 @@ export function modalToggle() {
     asideElementClass = "modal";
 
     let closeElement = modalWindow.querySelector(".icon--close");
-    console.log(modalWindow);
 
     modalOpen(activateElements, modalWindow, asideElementClass);
 
@@ -71,14 +70,13 @@ export function modalToggle() {
   }
 
   function modalClose(closeElement, aside, asideElementClass) {
-    // console.log(asideElementClass);
     closeElement.addEventListener("click", function () {
       let asideWrap = aside.querySelector(".modal__wrap");
+
       asideWrap.classList.remove("modal__wrap--show");
       aside.classList.remove(asideElementClass + "--show");
       setTimeout(() => {
         aside.style.display = "";
-        console.log(aside);
         body.classList.remove("body--open-modal");
       }, 300);
 
@@ -90,7 +88,7 @@ export function modalToggle() {
     });
   }
 
-  document.addEventListener("click", function (evt) {
-    // console.log(evt.target);
-  });
+  // document.addEventListener("click", function (evt) {
+  //   // console.log(evt.target);
+  // });
 }

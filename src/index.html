@@ -15,7 +15,7 @@
   </head>
   <body class="body">
     <main class="content-wrap">
-      <aside class="modal-left-menu modal modal--left">
+      <div class="modal-left-menu modal modal--left">
         <div class="modal__wrap modal__wrap--left">
           <div class="modal-menu">
             <div class="modal-menu__header">
@@ -27,7 +27,8 @@
               </div>
               <button class="modal-menu__search icon"></button>
             </div>
-            <div class="modal-menu__navigation">
+
+            <nav class="modal-menu__navigation">
               <ul class="modal-menu__navigation-items">
                 <li class="modal-menu__navigation-item">
                   <a class="link" href="#">Ремонт техники</a>
@@ -56,7 +57,7 @@
                   <a class="link" href="#">Контакты</a>
                 </li>
               </ul>
-            </div>
+            </nav>
             <div class="modal-menu__footer">
               <div class="modal-menu__footer-icons">
                 <div class="modal-menu__footer-icon-set service-icon-set">
@@ -66,10 +67,10 @@
                 </div>
               </div>
               <div class="modal-menu__footer-mail">
-                <a class="link" href="#">mail@cps.com</a>
+                <a class="link" href="mailto: mail@cps.com">mail@cps.com</a>
               </div>
               <div class="modal-menu__footer-phone-number">
-                <a class="link" href="#">8 800 890 8900</a>
+                <a class="link" href="tel: 88008908900">8 800 890 8900</a>
               </div>
               <div class="modal-menu__footer-language-change language-change">
                 <button
@@ -83,9 +84,9 @@
             </div>
           </div>
         </div>
-      </aside>
+      </div>
 
-      <aside class="modal-feedback modal modal--right">
+      <div class="modal-feedback modal modal--right">
         <div class="modal__wrap modal__wrap--right">
           <div class="modal__inner">
             <button class="modal__icon-close icon--close icon"></button>
@@ -127,18 +128,22 @@
             </form>
             <p class="modal__text">
               Нажимая “отправить”, вы даете согласие на
-              <a class="link" href="#">обработку персональных данных</a> и
-              соглашаетесь с нашей
-              <a class="link" href="#">политикой конфиденциальности</a>
+              <a class="link link--pink" href="#"
+                >обработку персональных данных</a
+              >
+              и соглашаетесь с нашей
+              <a class="link link--pink" href="#"
+                >политикой конфиденциальности</a
+              >
             </p>
             <button type="submit" class="modal__submit form-button">
               Отправить
             </button>
           </div>
         </div>
-      </aside>
+      </div>
 
-      <aside class="modal-call modal modal--right">
+      <div class="modal-call modal modal--right">
         <div class="modal__wrap modal__wrap--right">
           <div class="modal__inner">
             <button class="modal__icon-close icon--close icon"></button>
@@ -155,16 +160,20 @@
             </form>
             <p class="modal__text">
               Нажимая “отправить”, вы даете согласие на
-              <a class="link" href="#">обработку персональных данных</a> и
-              соглашаетесь с нашей
-              <a class="link" href="#">политикой конфиденциальности</a>
+              <a class="link link--pink" href="#"
+                >обработку персональных данных</a
+              >
+              и соглашаетесь с нашей
+              <a class="link link--pink" href="#"
+                >политикой конфиденциальности</a
+              >
             </p>
             <button type="submit" class="modal__submit form-button">
               Отправить
             </button>
           </div>
         </div>
-      </aside>
+      </div>
 
       <header class="header">
         <div class="header__wrap">
@@ -208,22 +217,22 @@
           <nav class="service__navigation navigation">
             <ul class="navigation__items">
               <li class="navigation__item navigation__item--selected">
-                <a class="link" href="#">Ремонтируемые бренды</a>
+                <a class="link link--grey" href="#">Ремонтируемые бренды</a>
               </li>
               <li class="navigation__item">
-                <a class="link" href="#">Ремонтируемые устройства</a>
+                <a class="link link--grey" href="#">Ремонтируемые устройства</a>
               </li>
               <li class="navigation__item">
-                <a class="link" href="#">Цены на услуги</a>
+                <a class="link link--grey" href="#">Цены на услуги</a>
               </li>
               <li class="navigation__item">
-                <a class="link" href="#">Адреса сервисных центров</a>
+                <a class="link link--grey" href="#">Адреса сервисных центров</a>
               </li>
               <li class="navigation__item">
-                <a class="link" href="#">Специальные цены</a>
+                <a class="link link--grey" href="#">Специальные цены</a>
               </li>
               <li class="navigation__item">
-                <a class="link" href="#">Отзывы</a>
+                <a class="link link--grey" href="#">Отзывы</a>
               </li>
             </ul>
           </nav>

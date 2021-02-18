@@ -4,7 +4,7 @@ $dark-text-color: #1b1c21;
 $light-text-color: #7e7e82;
 $background-body-color: #f8f8f8;
 $background-item-color: #ffffff;
-$item-hover: #ffeef3;
+$item-hover: #ff3e791a;
 
 $header-margin-top: 89px;
 
@@ -12,6 +12,7 @@ $header-margin-top: 89px;
 @import "./normalize.scss";
 @import "./font-face.scss";
 @import "./common-style.scss";
+@import "./blocks/link.scss";
 @import "./blocks/brands.scss";
 @import "./blocks/buttons-block.scss";
 @import "./blocks/footer.scss";

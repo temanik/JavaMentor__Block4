@@ -10,7 +10,7 @@ export function readMore() {
 
     function readMoreToggle() {
       if (!readMoreOpenStarus) {
-        readMoreParent.style.maxHeight = "5000px";
+        readMoreParent.style.maxHeight = "1000px";
         readMoreArrow.style.transform = "rotate(180deg)";
         readMore[i].textContent = "Скрыть";
         readMore[i].appendChild(readMoreArrow);
